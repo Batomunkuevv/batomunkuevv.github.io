@@ -39,6 +39,9 @@ body {
     &_fz14 {
         font-size: 0.875rem;
         line-height: 150%;
+        @media (max-width: 576px) {
+            font-size: 0.825rem;
+        }
     }
     @media (max-width: 992px) {
         font-size: 2rem;
