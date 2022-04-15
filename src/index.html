@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/head.html', { 'title': 'Главная' })
+
+    <body>
+        <div class="wrapper">
+            @@include('html/main/sidepanel.html',{})
+            <main class="page">
+                @@include('html/main/mainscreen.html',{}) @@include('html/main/aboutme.html',{})
+                @@include('html/main/useful.html',{}) @@include('html/main/skills.html',{})
+                @@include('html/main/works.html',{}) @@include('html/main/price.html',{})
+            </main>
+        </div>
+        <div class="overlay hide"></div>
+        <!--*===================== Scripts======================== -->
+        <script src="js/script.min.js"></script>
+        <!--* ==================================================== -->
+    </body>
+</html>

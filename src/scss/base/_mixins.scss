@@ -1,0 +1,65 @@
+//*<Before_circle>=================================================================================================
+
+@mixin before_circle {
+    &::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: 0;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        background: $main-color;
+        z-index: -1;
+    }
+}
+
+//*</Before_circle>=================================================================================================
+
+//*<Small__circle>=================================================================================================
+
+@mixin smallCircle {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: -15px;
+        left: -8px;
+        border-radius: 100%;
+        background: $main-color;
+        z-index: 2;
+    }
+}
+
+//*</Small__circle>=================================================================================================
+
+//*<Underline>=================================================================================================
+
+@mixin orangeUnderline {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background: $main-color;
+    }
+}
+
+// @mixin orangeUnderlineLeft {
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         width: 60px;
+//         height: 2px;
+//         bottom: 0;
+//         left: 0;
+//         transform: translate(0, 0);
+//         background: $main-color;
+//     }
+// }
+
+//*</Underline>===============================================================================================;

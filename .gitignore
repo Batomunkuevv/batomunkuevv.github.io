@@ -1,0 +1,5 @@
+*.json
+gulpfile.js
+node_modules/
+gulp/
+dist/
