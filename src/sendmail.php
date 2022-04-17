@@ -14,13 +14,13 @@ $mail->IsHTML(true);
 
 // От кого письмо
 
-$mail->isSMTP();
-$mail->Host = 'smtp.yandex.ru';
-$mail->SMTPAuth = true;
-$mail->Username = 'batomunkuevkirill@yandex.ru';
-$mail->Password = 'Iloveyou2906';
-$mail->SMTPSecure = 'ssl';
-$mail->Port = 465;
+// $mail->isSMTP();
+// $mail->Host = 'smtp.yandex.ru';
+// $mail->SMTPAuth = true;
+// $mail->Username = 'batomunkuevkirill@yandex.ru';
+// $mail->Password = 'Iloveyou2906';
+// $mail->SMTPSecure = 'ssl';
+// $mail->Port = 465;
 $mail->setFrom('info@fls.guru', 'Фрилансер по жизни');
 
 // Кому отправить

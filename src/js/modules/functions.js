@@ -39,6 +39,7 @@ export function ibg() {
 export function hideElement(element) {
     element.classList.add("hide");
     element.classList.remove("show");
+    element.classList.remove("fadeIn");
 }
 
 //*</Hide element>=================================================================================================
@@ -48,6 +49,7 @@ export function hideElement(element) {
 export function showElement(element) {
     element.classList.remove("hide");
     element.classList.add("show");
+    element.classList.add("fadeIn");
 }
 
 //*</Show element>=================================================================================================

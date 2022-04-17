@@ -19,6 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const burger = document.querySelector(".mainscreen__burger"),
         menuClose = document.querySelector(".menu__close"),
         menu = document.querySelector(".mainscreen__menu"),
+        menuItems = menu.querySelectorAll(".menu__item"),
         overlay = document.querySelector(".overlay");
 
     function menuOpen() {
@@ -41,6 +42,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
     menuClose.addEventListener("click", () => {
         menuCloses();
+    });
+
+    menuItems.forEach((item) => {
+        item.addEventListener("click", (e) => {
+            menuCloses();
+        });
     });
 
     document.addEventListener("keydown", (e) => {
@@ -69,13 +76,37 @@ window.addEventListener("DOMContentLoaded", () => {
         if (document.documentElement.scrollTop > 650) {
             sidePanel.style.cssText = "color: #000;";
             sidePanelDivider.style.cssText = "background: #000";
+            myFunctions.showElement(pageUp);
         } else {
+            myFunctions.hideElement(pageUp);
             sidePanel.style.cssText = "color: #fff;";
             sidePanelDivider.style.cssText = "background: #fff";
         }
     });
 
     //*</Sidepanel>=================================================================================================
+
+    //*<Pageup>=================================================================================================
+
+    const pageUp = document.querySelector(".pageup");
+
+    pageUp.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        let href = pageUp.getAttribute("href").substring(1);
+
+        const scrollTarget = document.getElementById(href),
+            topOffset = 0,
+            elementPosition = scrollTarget.getBoundingClientRect().top,
+            offsetPosition = elementPosition - topOffset; //! const topOffset = 0; // если не нужен отступ сверху
+
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: "smooth",
+        });
+    });
+
+    //*</Pageup>=================================================================================================
 
     //*<Modal>=================================================================================================
 
