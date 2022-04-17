@@ -1,5 +1,8 @@
 .price {
-    padding: 0px 0px 120px 0px;
+    padding: 0px 0px 60px 0px;
+    @media (max-width: 768px) {
+        padding: 0px 0px 40px 0px;
+    }
     &__container {
     }
 

@@ -34,6 +34,18 @@ body {
     font-size: 2.25rem;
     line-height: 166%;
     @include orangeUnderline;
+    &_left {
+        @include orangeUnderlineLeft;
+        position: relative;
+        font-size: 2.25rem;
+        line-height: 166%;
+        @media (max-width: 992px) {
+            font-size: 2rem;
+        }
+        @media (max-width: 576px) {
+            font-size: 1.5rem;
+        }
+    }
     &_fz20 {
     }
     &_fz14 {

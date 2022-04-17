@@ -36,6 +36,8 @@
         grid-row: 1 / 3;
         text-align: center;
         & img {
+            object-fit: cover;
+            object-position: center;
             max-width: 100%;
             height: 100%;
         }
