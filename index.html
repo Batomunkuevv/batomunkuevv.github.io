@@ -458,28 +458,46 @@
             </div>
             <div class="contacts__form">
                 <form action="#" class="form">
-                    <div class="form__input">
-                        <input id="formName" type="text" name="name" required />
-                        <label for="formName">Ваше имя</label>
+                    <div class="form__item">
+                        <input
+                            class="form__input _req _name"
+                            id="formName"
+                            type="text"
+                            name="name"
+                        />
+                        <label class="form__label" for="formName">Ваше имя</label>
                     </div>
-                    <div class="form__input">
-                        <input id="formEmail" type="email" name="email" required />
-                        <label for="formEmail">Ваша почта</label>
+                    <div class="form__item">
+                        <input
+                            class="form__input _req _email"
+                            id="formEmail"
+                            type="email"
+                            name="email"
+                        />
+                        <label class="form__label" for="formEmail">Ваша почта</label>
                     </div>
-                    <div class="form__textarea">
-                        <textarea id="text" name="text"></textarea>
-                        <label for="text">Ваше сообщение</label>
+                    <div class="form__item">
+                        <textarea class="form__textarea" id="text" name="text"></textarea>
+                        <label class="form__label" for="text">Ваше сообщение</label>
                     </div>
                     <div class="form__triggers">
                         <button class="form__btn btn">Отправить сообщение</button>
-                        <div class="form__policy">
-                            <input type="checkbox" class="form__checkbox" required />
-                            <span>
-                                Я согласен(а)
-                                <a target="_blank" href="privacy.html" class="form__link">
-                                    с политикой конфиденциальности
-                                </a>
-                            </span>
+                        <div class="checkbox">
+                            <input
+                                checked
+                                id="formAgreement"
+                                type="checkbox"
+                                name="agreement"
+                                class="form__checkbox _req"
+                            />
+                            <label for="formAgreement" class="checkbox__label">
+                                <span
+                                    >Я согласен(а)
+                                    <a target="_blank" href="privacy.html" class="form__link">
+                                        с политикой конфиденциальности
+                                    </a>
+                                </span>
+                            </label>
                         </div>
                     </div>
                 </form>
@@ -489,6 +507,16 @@
 </div>
 
             </main>
+            <div class="overlay_modal hide">
+    <div class="modal">
+        <div class="modal__thanks modal-thanks hide">
+            <div class="modal-thanks__close">&times;</div>
+            <div class="modal-thanks__title">Спасибо за вашу заявку!</div>
+            <div class="modal-thanks__descr">Я свяжусь с вами в ближайшее время!</div>
+        </div>
+    </div>
+</div>
+
         </div>
         <div class="overlay hide"></div>
         <!--*===================== Scripts======================== -->
