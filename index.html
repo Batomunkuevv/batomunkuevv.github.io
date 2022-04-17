@@ -66,7 +66,7 @@
     <!--* ================================================================  -->
 
     <title>Главная</title>
-    <link rel="stylesheet" href="css/main.min.css?_v=20220417190542" />
+    <link rel="stylesheet" href="css/main.min.css?_v=20220418001202" />
 </head>
 
 
@@ -74,13 +74,17 @@
         <div class="wrapper">
             <aside class="sidepanel">
     <div class="social">
-        <a href="#" class="social__link sidepanel__link">
+        <a target="_blank" href="https://vk.com/batomunkuevv" class="social__link sidepanel__link">
             <span class="icon-facebook"></span>
         </a>
-        <a href="#" class="social__link sidepanel__link">
+        <a target="_blank" href="#" class="social__link sidepanel__link">
             <span class="icon-inst"></span>
         </a>
-        <a href="#" class="social__link sidepanel__link">
+        <a
+            target="_blank"
+            href="https://github.com/Batomunkuevv"
+            class="social__link sidepanel__link"
+        >
             <span class="icon-GIthub"></span>
         </a>
     </div>
@@ -89,7 +93,7 @@
 </aside>
 
             <main class="page">
-                <section class="page__mainscreen mainscreen">
+                <section id="mainscreen" class="page__mainscreen mainscreen">
     <div class="mainscreen__burger">
         <span></span>
         <span></span>
@@ -102,22 +106,22 @@
         </div>
         <ul class="menu__list">
             <li class="menu__item">
-                <a href="#" class="menu__link">Про меня</a>
+                <a href="#aboutme" class="menu__link">Про меня</a>
             </li>
             <li class="menu__item">
-                <a href="#" class="menu__link">Мой опыт</a>
+                <a href="#experience" class="menu__link">Мой опыт</a>
             </li>
             <li class="menu__item">
-                <a href="#" class="menu__link">Мои навыки</a>
+                <a href="#skills" class="menu__link">Мои навыки</a>
             </li>
             <li class="menu__item">
-                <a href="#" class="menu__link">Мои работы</a>
+                <a href="#works" class="menu__link">Мои работы</a>
             </li>
             <li class="menu__item">
-                <a href="#" class="menu__link">Прайс лист</a>
+                <a href="#price" class="menu__link">Прайс лист</a>
             </li>
             <li class="menu__item">
-                <a href="#" class="menu__link">Контакты</a>
+                <a href="#contacts" class="menu__link">Контакты</a>
             </li>
         </ul>
         <div class="menu__social social social_row">
@@ -137,13 +141,13 @@
             <div class="mainscreen__meet subtitle">Меня зовут Кирилл Батомункуев</div>
             <h1 class="mainscreen__title">Я web-разработчик из города Томск</h1>
             <div class="mainscreen__btns">
-                <a href="" class="mainscreen__btn btn">Портфолио</a>
-                <a href="" class="mainscreen__btn btn btn_transparent">Про меня</a>
+                <a href="#works" class="mainscreen__btn btn">Портфолио</a>
+                <a href="#aboutme" class="mainscreen__btn btn btn_transparent">Про меня</a>
             </div>
         </div>
     </div>
 </section>
- <section class="page__aboutme aboutme">
+ <section id="aboutme" class="page__aboutme aboutme">
     <div class="aboutme__container container">
         <div class="aboutme__body">
             <div class="aboutme__img">
@@ -199,7 +203,7 @@
     </div>
 </section>
 
-                <section class="useful">
+                <section id="experience" class="useful">
     <div class="useful__container container">
         <div class="useful__header header-block">
             <div class="header-block__subtitle subtitle">Опыт</div>
@@ -273,7 +277,7 @@
         </div>
     </div>
 </section>
- <section class="page__skills skills">
+ <section id="skills" class="page__skills skills">
     <div class="skills__container container">
         <div class="skills__header header-block">
             <div class="header-block__subtitle subtitle">Навыки</div>
@@ -362,7 +366,7 @@
     </div>
 </section>
 
-                <section class="page__works works">
+                <section id="works" class="page__works works">
     <div class="works__container container">
         <div class="works__header header-block">
             <div class="header-block__subtitle subtitle">Портфолио</div>
@@ -391,7 +395,7 @@
         </div>
     </div>
 </section>
- <div class="page__price price">
+ <section id="price" class="page__price price">
     <div class="price__container container">
         <div class="price__header header-block">
             <div class="header-block__subtitle subtitle">Прайс-лист</div>
@@ -429,9 +433,9 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
-                <div class="page__contacts contacts">
+                <section id="#contacts" class="page__contacts contacts">
     <div class="contacts__container container">
         <div class="contacts__body">
             <div class="contacts__image">
@@ -504,7 +508,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
             </main>
             <div class="overlay_modal hide">
@@ -516,11 +520,14 @@
         </div>
     </div>
 </div>
+ <a href="#mainscreen" class="pageup hide">
+    <picture><source srcset="images/pageup/arrowup.webp" type="image/webp"><img src="images/pageup/arrowup.png" alt="Arrow up" /></picture>
+</a>
 
         </div>
         <div class="overlay hide"></div>
         <!--*===================== Scripts======================== -->
-        <script src="js/script.min.js?_v=20220417190542"></script>
+        <script src="js/script.min.js?_v=20220418001202"></script>
         <!--* ==================================================== -->
     </body>
 </html>
