@@ -13,29 +13,30 @@ $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->IsHTML(true);
 
 // От кого письмо
-// $mail->isSMTP();
-// $mail->Host = 'smtp.yandex.ru';
-// $mail->SMTPAuth = true;
-// $mail->Username = 'batomunkuevkirill@yandex.ru';
-// $mail->Password = 'Iloveyou2906';
-// $mail->SMTPSecure = 'ssl';
-// $mail->Port = 465;
-$mail->setFrom('kolxic@gmail.com', 'Pulse');
+
+$mail->isSMTP();
+$mail->Host = 'smtp.yandex.ru';
+$mail->SMTPAuth = true;
+$mail->Username = 'batomunkuevkirill@yandex.ru';
+$mail->Password = 'Iloveyou2906';
+$mail->SMTPSecure = 'ssl';
+$mail->Port = 465;
+$mail->setFrom('info@fls.guru', 'Фрилансер по жизни');
+
 // Кому отправить
+
 $mail->addAddress('batomunkuevkirill@yandex.ru');
+
 // Тема
+
 $mail->Subject = 'Данные!';
 
-//Тело письма
+// Тело письма
 
 $body = '<h1>Супер письмо</h1>';
 
 if (trim(!empty($_POST['name']))) {
 	$body .= '<p><strong>Имя:</strong>' . $_POST['name'] . '</p>';
-}
-
-if (trim(!empty($_POST['phone']))) {
-	$body .= '<p><strong>Телефон:</strong>' . $_POST['phone'] . '</p>';
 }
 
 if (trim(!empty($_POST['email']))) {
@@ -45,6 +46,7 @@ if (trim(!empty($_POST['email']))) {
 $mail->Body = $body;
 
 // Отправляем
+
 if (!$mail->send()) {
 	$message = 'Ошибка';
 } else {
