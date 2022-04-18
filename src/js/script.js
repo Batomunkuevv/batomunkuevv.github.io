@@ -7,12 +7,11 @@ import * as myFunctions from "./modules/functions.js";
 //*</Import>====================================================================================================
 
 window.addEventListener("DOMContentLoaded", () => {
-    //*<Functions>=================================================================================================
+    //*<Web-p>=================================================================================================
 
-    myFunctions.ibg();
     myFunctions.isWebp();
 
-    //*</Functions>=================================================================================================
+    //*</Web-p>=================================================================================================
 
     //*<Menu>=================================================================================================
 
@@ -24,15 +23,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
     function menuOpen() {
         menu.classList.add("mainscreen__menu_active");
-        overlay.classList.add("fadeIn");
-        overlay.classList.remove("hide");
+        myFunctions.showElement(overlay);
         document.body.classList.add("lock");
     }
 
     function menuCloses() {
         menu.classList.remove("mainscreen__menu_active");
-        overlay.classList.add("hide");
-        overlay.classList.remove("fadeIn");
+        myFunctions.hideElement(overlay);
         document.body.classList.remove("lock");
     }
 
@@ -46,7 +43,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     menuItems.forEach((item) => {
         item.addEventListener("click", (e) => {
+            e.preventDefault();
             menuCloses();
+            myFunctions.scrollTo(e.target);
         });
     });
 
@@ -55,7 +54,21 @@ window.addEventListener("DOMContentLoaded", () => {
             menuCloses();
         }
     });
+
     //*</Menu>=================================================================================================
+
+    //*<Mainscreen-Btn>=================================================================================================
+
+    const mainscreenBtn = document.querySelectorAll(".mainscreen__btn");
+
+    mainscreenBtn.forEach((item) => {
+        item.addEventListener("click", (e) => {
+            e.preventDefault();
+            myFunctions.scrollTo(e.target);
+        });
+    });
+
+    //*</Mainscreen-Btn>=================================================================================================
 
     //*<Progress>=================================================================================================
 
@@ -65,6 +78,7 @@ window.addEventListener("DOMContentLoaded", () => {
     progressItemProcent.forEach((item, i) => {
         progressItemLine[i].style.cssText = `width: ${item.textContent}`;
     });
+
     //*</Progress>=================================================================================================
 
     //*<Sidepanel>=================================================================================================
@@ -93,17 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
     pageUp.addEventListener("click", (e) => {
         e.preventDefault();
 
-        let href = pageUp.getAttribute("href").substring(1);
-
-        const scrollTarget = document.getElementById(href),
-            topOffset = 0,
-            elementPosition = scrollTarget.getBoundingClientRect().top,
-            offsetPosition = elementPosition - topOffset; //! const topOffset = 0; // если не нужен отступ сверху
-
-        window.scrollBy({
-            top: offsetPosition,
-            behavior: "smooth",
-        });
+        myFunctions.scrollTo(pageUp, 0);
     });
 
     //*</Pageup>=================================================================================================

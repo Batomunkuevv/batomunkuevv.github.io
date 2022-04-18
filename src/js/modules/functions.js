@@ -20,20 +20,6 @@ export function isWebp() {
 
 //*</WebP>=================================================================================================
 
-//*<Ibg>=================================================================================================
-
-export function ibg() {
-    let ibg = document.querySelectorAll(".ibg");
-    for (var i = 0; i < ibg.length; i++) {
-        if (ibg[i].querySelector("img")) {
-            ibg[i].style.backgroundImage =
-                "url(" + ibg[i].querySelector("img").getAttribute("src") + ")";
-        }
-    }
-}
-
-//*</Ibg>=================================================================================================
-
 //*<Hide element>=================================================================================================
 
 export function hideElement(element) {
@@ -53,3 +39,21 @@ export function showElement(element) {
 }
 
 //*</Show element>=================================================================================================
+
+//*<Scroll-to>=================================================================================================
+
+export function scrollTo(element, offset = 0) {
+    let href = element.getAttribute("href").substring(1);
+
+    const scrollTarget = document.getElementById(href),
+        topOffset = offset,
+        elementPosition = scrollTarget.getBoundingClientRect().top,
+        offsetPosition = elementPosition - topOffset; //! const topOffset = 0; // если не нужен отступ сверху
+
+    window.scrollBy({
+        top: offsetPosition,
+        behavior: "smooth",
+    });
+}
+
+//*</Scroll-to>=================================================================================================

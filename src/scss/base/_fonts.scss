@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: "icomoon";
-    src: url("../fonts/icomoon.eot?ka4hte");
-    src: url("../fonts/icomoon.eot?ka4hte#iefix") format("embedded-opentype"),
-        url("../fonts/icomoon.ttf?ka4hte") format("truetype"),
-        url("../fonts/icomoon.woff?ka4hte") format("woff"),
-        url("../fonts/icomoon.svg?ka4hte#icomoon") format("svg");
+    src: url("../fonts/icomoon.eot?fgl3wf");
+    src: url("../fonts/icomoon.eot?fgl3wf#iefix") format("embedded-opentype"),
+        url("../fonts/icomoon.ttf?fgl3wf") format("truetype"),
+        url("../fonts/icomoon.woff?fgl3wf") format("woff"),
+        url("../fonts/icomoon.svg?fgl3wf#icomoon") format("svg");
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -14,7 +14,7 @@
 
 [class^="icon-"],
 [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
+    /* use !important to prevent issues with browser extensions that change ../fonts */
     font-family: "icomoon" !important;
     speak: never;
     font-style: normal;
@@ -28,12 +28,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-inst:before {
+.icon-instagram:before {
+    content: "\e903";
+}
+.icon-telegram:before {
     content: "\e900";
 }
-.icon-GIthub:before {
+.icon-github:before {
     content: "\e901";
 }
-.icon-facebook:before {
+.icon-vk-alternitive:before {
     content: "\e902";
 }
