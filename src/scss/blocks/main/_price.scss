@@ -10,6 +10,9 @@
         .subtitle {
             padding: 0 0 30px 0;
             @include orangeUnderline;
+            &::before {
+                top: -10%;
+            }
         }
     }
 

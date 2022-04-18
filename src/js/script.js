@@ -87,7 +87,7 @@ window.addEventListener("DOMContentLoaded", () => {
         sidePanelDivider = sidePanel.querySelector(".sidepanel__divider");
 
     window.addEventListener("scroll", (e) => {
-        if (document.documentElement.scrollTop > 650) {
+        if (document.documentElement.scrollTop > 600) {
             sidePanel.style.cssText = "color: #000;";
             sidePanelDivider.style.cssText = "background: #000";
             myFunctions.showElement(pageUp);
@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
     pageUp.addEventListener("click", (e) => {
         e.preventDefault();
 
-        myFunctions.scrollTo(pageUp, 0);
+        myFunctions.scrollTo(pageUp);
     });
 
     //*</Pageup>=================================================================================================

@@ -117,7 +117,7 @@
         grid-template: 45px 190px 45px / repeat(2, 220px);
     }
     @media (max-width: 992px) {
-        grid-template: 45px 45px 190px 45px / 1fr;
+        grid-template: 45px 45px 190px auto / 1fr;
         row-gap: 20px;
     }
     &__item {
@@ -241,6 +241,17 @@
             border-radius: 100%;
             transform: scale(0);
             transition: all 0.3s ease 0s;
+            @media (max-width: 1200px) {
+                top: 12px;
+                left: 4.5px;
+            }
+            @media (max-width: 992px) {
+                top: 4px;
+                left: 4px;
+            }
+            @media (max-width: 350px) {
+                top: 12px;
+            }
         }
     }
 }

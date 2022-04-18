@@ -25,7 +25,7 @@ export function isWebp() {
 export function hideElement(element) {
     element.classList.add("hide");
     element.classList.remove("show");
-    element.classList.remove("fadeIn");
+    element.classList.remove("fadeOut");
 }
 
 //*</Hide element>=================================================================================================
