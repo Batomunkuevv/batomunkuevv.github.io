@@ -1,0 +1,236 @@
+//*<Base>=======================================================================================================
+
+@import "base/fonts";
+@import "base/variables";
+@import "base/nullstyle";
+
+//*</Base>=====================================================================================================
+
+//*<Wrapper>==================================================================================================
+
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+//*</Wrapper>=================================================================================================
+
+//*<Main grid>================================================================================================
+
+.container {
+    max-width: $maxWidthContainer;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media (max-width: 1200px) {
+        max-width: 960px;
+    }
+    @media (max-width: 992px) {
+        max-width: 720px;
+    }
+    @media (max-width: 768px) {
+        max-width: 540px;
+    }
+    @media (max-width: 576px) {
+        max-width: none;
+    }
+}
+
+.page {
+    &__privacy {
+    }
+}
+
+//*</Main grid>===============================================================================================
+
+//!===========================================================================================================
+
+//*</Main block>==============================================================================================
+
+.privacy {
+    padding: 15px 0px 0px 0px;
+    &__container {
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin: 0px 0px 30px 0px;
+    }
+
+    &__mainul {
+        li {
+            padding: 0 15px;
+            margin: 20px 0px 10px 0px;
+            div {
+                margin: 30px 0px 30px 0px;
+                padding: 0 15px;
+            }
+        }
+    }
+}
+
+.mainul {
+    &__common {
+    }
+
+    &__main {
+    }
+
+    &__mainrights {
+    }
+
+    &__rightssubject {
+    }
+
+    &__can {
+    }
+
+    &__principal {
+    }
+
+    &__target {
+    }
+
+    &__grounds {
+    }
+
+    &__conditions {
+    }
+
+    &__order {
+    }
+
+    &__list {
+    }
+
+    &__crossborder {
+    }
+
+    &__confidencial {
+    }
+
+    &__end {
+    }
+}
+
+.common-mainul {
+    &__text {
+    }
+
+    &__list {
+    }
+
+    &__item {
+    }
+}
+
+.main-mainul {
+    &__list {
+    }
+
+    &__item {
+    }
+}
+
+.mainrights-mainul {
+    &__list {
+    }
+
+    &__item {
+    }
+}
+
+.rightssubject-mainul {
+    &__list {
+    }
+
+    &__item {
+    }
+}
+
+.can-mainul {
+    &__list {
+    }
+
+    &__item {
+    }
+}
+
+.principal-mainul {
+    &__list {
+    }
+
+    &__item {
+    }
+}
+
+.target-mainul {
+    &__list {
+    }
+
+    &__item {
+    }
+}
+
+.grounds-mainul {
+    &__list {
+    }
+
+    &__item {
+    }
+}
+
+.conditions-mainul {
+    &__list {
+    }
+
+    &__item {
+    }
+}
+
+.order-mainul {
+    &__text {
+    }
+
+    &__list {
+    }
+
+    &__item {
+    }
+}
+
+.list-mainul {
+    &__list {
+    }
+
+    &__item {
+    }
+}
+
+.crossborder-mainul {
+    &__list {
+    }
+
+    &__item {
+    }
+}
+
+.confidencial-mainul {
+    &__text {
+    }
+}
+
+.end-mainul {
+    &__list {
+    }
+
+    &__item {
+    }
+}
+
+//*</Main block>==============================================================================================
+
+//!===========================================================================================================
