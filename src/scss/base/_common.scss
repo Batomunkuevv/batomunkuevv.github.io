@@ -102,12 +102,13 @@ body {
 .social {
     display: flex;
     flex-direction: column;
+
     &_row {
         flex-direction: row-reverse;
     }
     &__link {
-        color: inherit;
         padding: 5px;
+        color: inherit;
     }
 }
 
