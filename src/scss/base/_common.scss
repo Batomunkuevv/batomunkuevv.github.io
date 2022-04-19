@@ -81,9 +81,21 @@ body {
     color: inherit;
     font-size: 1rem;
     line-height: 150%;
-    &_transparent {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.9);
+    transition: all 0.5s ease 0s;
+    &:hover {
+        transition: all 0.5s ease 0s;
         background: transparent;
+    }
+    &_transparent {
+        background: transparent;
+        &:hover {
+            background: $main-color;
+            transition: all 0.5s ease 0s;
+        }
+    }
+
+    &:active {
+        transform: scale(0.95);
     }
 }
 
@@ -116,22 +128,4 @@ body {
         background: rgba(0, 0, 0, 0.75);
         z-index: 5;
     }
-}
-
-.hide {
-    display: none;
-}
-
-.show {
-    display: block;
-}
-
-.fadeIn {
-    animation-name: fadeIn;
-    animation-duration: 0.5s;
-}
-
-.fadeOut {
-    animation-name: fadeOut;
-    animation-duration: 0.5s;
 }

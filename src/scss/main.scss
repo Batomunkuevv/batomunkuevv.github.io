@@ -143,3 +143,21 @@
 //*</Main block>==============================================================================================
 
 //!===========================================================================================================
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
+}

@@ -21,7 +21,7 @@ $mail->IsHTML(true);
 // $mail->Password = 'Iloveyou2906';
 // $mail->SMTPSecure = 'ssl';
 // $mail->Port = 465;
-$mail->setFrom('info@fls.guru', 'Фрилансер по жизни');
+$mail->setFrom('guest@mail.ru', 'Guest');
 
 // Кому отправить
 
