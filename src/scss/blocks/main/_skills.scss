@@ -65,6 +65,20 @@
         & img {
             max-width: 100%;
         }
+        &_black {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 45px;
+                height: 47px;
+                background: #000;
+                border-radius: 100%;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
     }
 
     &__title {
